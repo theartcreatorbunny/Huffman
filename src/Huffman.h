@@ -3,10 +3,12 @@
 //
 
 #ifndef GRIGRORY_HUFFMAN_CODE_HUFFMAN_H
-#define GRIGRORY_HUFFMAN_CODE_HUFFMAN_H
-
 #include <string>
 #include "Node.cpp"
+#include <map>
+#define GRIGRORY_HUFFMAN_CODE_HUFFMAN_H
+
+
 
 class Huffman {
 public:
@@ -15,7 +17,9 @@ public:
 
 private:
     Node* root;
+    std::map<char,std::string> codeDictionary;
     void BuildTree(const std::string& s);
+    void assignCodesToNodes(Node* node);
 };
 
 
